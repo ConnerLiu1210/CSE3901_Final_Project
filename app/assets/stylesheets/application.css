@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+  border-style: outset;
+  border-color: #888;
+}
+
+header {
+  background: #c40018;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+#menu li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* soft glass hover */
+  backdrop-filter: blur(4px);
+  transform: translateY(-2px);
+}
+
+.mytable {
+  width: 85%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  margin: 0 auto; /* Centers the table */
+}
+
+.mytable th,
+.mytable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.mytable th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mytable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.mytable tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.mytable tbody tr:hover {
+  background-color: #e6f7ff;
+  transition: background-color 0.3s;
+}
+
+.mytable tfoot td {
+  text-align: center; /* Centers text in the footer cells */
+  padding: 12px 15px;
+  border-top: 1px solid #ddd;
+}
+
+.form-style {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: 0;
+}
+
+.form-style label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-style input {
+  width: 88%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-style input:focus {
+  border-color: #ea040f;
+  outline: none;
+}
+
+.form-style input[type='submit'] {
+  width: 100%;
+  padding: 12px;
+  background-color: #a5040f;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-style input[type='submit']:hover {
+  background-color: #db7908;
+}
+
+.form-fieldset {
+  border: 2px solid #2c3e01;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.form-legend {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+  color: #e3330b;
+}
+
+.site-footer {
+  background-color: #e30707;
+  color: #fff;
+  text-align: center;
+  padding: 0.2rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.flash {
+  width: 83%;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 15px auto;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.flash-notice {
+  background: green;
+}
+
+.flash-alert {
+  background: red;
+}
+
+.flash-info {
+  background: blue;
+}

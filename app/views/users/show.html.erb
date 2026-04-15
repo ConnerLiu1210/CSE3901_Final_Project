@@ -1,0 +1,25 @@
+<% provide(:title,'User Info')%>
+<table class="mytable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @user.id%></td>
+            <td><%= @user.name%></td>
+            <td><%= @user.phone%></td>
+            <td><%= @user.email%></td>
+            <td><%= @user.created_at%></td>
+            <td><%= @user.updated_at%></td>
+        </tr>
+    
+    </tbody>
+   
+</table>
