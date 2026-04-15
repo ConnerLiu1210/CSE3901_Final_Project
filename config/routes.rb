@@ -4,13 +4,19 @@ Rails.application.routes.draw do
   get 'home', to: 'static_pages#home', as:'home'
   get 'about', to: 'static_pages#about', as: 'about'
 
-  #------------------------------------------------------
-  # Example of possible trips routes
-  # get    '/trips',          to: 'trips#index',   as: 'trips'
-  # get    '/trips/new',      to: 'trips#new',     as: 'new_trip'
-  # post   '/trips',          to: 'trips#create'
-  # get    '/trips/:id',      to: 'trips#show',    as: 'trip'
-  # get    '/trips/:id/edit', to: 'trips#edit',    as: 'edit_trip'
-  # patch  '/trips/:id',      to: 'trips#update'
-  # delete '/trips/:id',      to: 'trips#destroy'
+  get "/login",  to: "sessions#new",  as: "login"
+  get "/signup", to: "users#new",     as: "signup"
+  delete "/logout", to: "sessions#destroy", as: "logout"
+
+  post "/users",    to: "users#create"
+  post "/sessions", to: "sessions#create"
 end
+
+# Example of possible trips routes
+# get    '/trips',          to: 'trips#index',   as: 'trips'
+# get    '/trips/new',      to: 'trips#new',     as: 'new_trip'
+# post   '/trips',          to: 'trips#create'
+# get    '/trips/:id',      to: 'trips#show',    as: 'trip'
+# get    '/trips/:id/edit', to: 'trips#edit',    as: 'edit_trip'
+# patch  '/trips/:id',      to: 'trips#update'
+# delete '/trips/:id',      to: 'trips#destroy'

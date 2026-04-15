@@ -1,34 +1,24 @@
-<% provide(:title, 'Sign up') %>
-<%= form_with(model: @user, html: { class: "form-style" }) do |form| %>
-  <fieldset class="form-fieldset">
-    <legend class="form-legend">Sign Up</legend>
-    <div>
-      <%= render 'layouts/partials/error_messages' %>
-    </div>
-    <div>
-      <%= form.label :name %>
-      <%= form.text_field :name, required: true, minlength: 5, maxlength: 50 %>
-    </div>
-    <div>
-      <%= form.label :email %>
-      <%= form.email_field :email,
-         required: true, minlength: 5, maxlength: 100,
-         pattern: "(?:[A-Za-z]+\\.\\d+@osu\\.edu|\\w+@gmail\\.com)",
-         title: "Example: amayreh.1@osu.edu or user@gmail.com" %>
-    </div>
-    <div>
-      <%= form.label :password %>
-      <%= form.password_field :password, required: true, minlength: 6, maxlength: 20 %>
-    </div>
-    <div>
-      <%= form.label :password_confirmation, "Confirmation" %>
-      <%= form.password_field :password_confirmation, required: true, minlength: 6, maxlength: 20 %>
-    </div>
-    <%= form.submit "Create my account" %>
-  </fieldset>
-<% end %>
+<h1>Sign Up</h1>
 
-<%= debug(@user) if Rails.env.development? %>
-<hr>
-<%=  simple_format@user.to_yaml if Rails.env.development? %>
+<form action="/users" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+    </div>
+
+    <div>
+        <button type="submit">Sign Up</button>
+    </div>
+</form>

@@ -10,25 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_11_14_174158) do
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "topic"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id", null: false
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
+ActiveRecord::Schema[7.2].define(version: 2026_04_15_192449) do
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "phone"
-    t.string "title"
-    t.string "password_digest"
   end
-
-  add_foreign_key "posts", "users"
 end
