@@ -1,0 +1,11 @@
+<div>
+    <% if logged_in?%>
+        <h1>Welcome, <%= current_user.username %></h1>
+        <%= link_to "Sign out", logout_path, data: { turbo_method: :delete } %>    
+    <% else %>
+        <h1>Please sign in to view your dashboard</h1>
+        <%= link_to "Sign in", login_path %><br>
+        <%= link_to "Sign up", signup_path %>
+    <% end %>
+
+</div>
