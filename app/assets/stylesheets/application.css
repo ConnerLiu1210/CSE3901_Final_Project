@@ -12,6 +12,7 @@ body {
   background-color: #f0f2ef;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -20,6 +21,7 @@ body {
   padding: 0 15px;
   box-sizing: border-box;
   flex: 1 0 auto;
+  width: 100%;
 }
 
 .center-text {
@@ -31,6 +33,7 @@ header {
   padding: 1rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 2rem;
+  flex-shrink: 0;
 }
 
 nav {
@@ -50,7 +53,8 @@ nav {
   flex-wrap: wrap;
 }
 
-#menu li a {
+#menu li a,
+.nav-link-button {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
@@ -62,11 +66,33 @@ nav {
   display: inline-block;
 }
 
-#menu li a:hover {
+form.button_to {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link-button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  line-height: inherit;
+}
+
+#menu li a:hover,
+.nav-link-button:hover {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(4px);
   color: #ecf39e;
   transform: translateY(-2px);
+}
+
+.user-welcome {
+  color: #ecf39e;
+  font-weight: bold;
+  font-style: italic;
+  margin-right: 10px;
 }
 
 .mytable {
@@ -110,8 +136,8 @@ nav {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 450px;
   margin: 2rem auto;
   box-sizing: border-box;
 }
@@ -171,11 +197,10 @@ nav {
 }
 
 .flash {
-  width: 90%;
-  max-width: 1100px;
+  width: 100%;
   padding: 15px;
   border-radius: 8px;
-  margin: 1rem auto;
+  margin-bottom: 1rem;
   font-size: 15px;
   color: #fff;
   text-align: center;
@@ -188,24 +213,23 @@ nav {
 .flash-info   { background: #31572c; }
 
 .site-footer {
-  background-color: #132a13;
+  background-color: #2d5a27;
   color: #f0f2ef;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  border-top: 4px solid #90a955;
   flex-shrink: 0;
 }
 
 .site-footer a {
-  color: #90a955;
+  color: #ecf39e;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease-in-out;
 }
 
 .site-footer a:hover {
-  color: #ecf39e;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -213,7 +237,8 @@ nav {
   #menu {
     gap: 0.5rem;
   }
-  #menu li a {
+  #menu li a,
+  .nav-link-button {
     font-size: 0.9rem;
     padding: 0.4rem 0.6rem;
   }
@@ -234,10 +259,13 @@ nav {
     width: 100%;
     text-align: center;
   }
-  #menu li a {
+  #menu li a,
+  form.button_to,
+  .nav-link-button {
     width: 100%;
     padding: 0.8rem 0;
     border-radius: 0;
+    display: block;
   }
   .mytable {
     display: block;
