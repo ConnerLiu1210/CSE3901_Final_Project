@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <ul id="menu">
+      <% if logged_in? %>
+        <li><span class="user-welcome"><%= current_user.username %></span></li>
+        <li><%= link_to "My Trips", "#" %></li>
+        <li><%= link_to "New Trip", "#" %></li>
+        <li>
+          <%= button_to "Log out", logout_path,
+                        method: :delete,
+                        class: "nav-link-button" %>
+        </li>
+      <% else %>
+        <li><%= link_to "Home", home_path %></li>
+        <li><%= link_to "Log in", login_path %></li>
+        <li><%= link_to "Sign up", signup_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

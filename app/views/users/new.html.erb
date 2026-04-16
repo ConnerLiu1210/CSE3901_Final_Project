@@ -1,24 +1,28 @@
-<h1>Sign Up</h1>
+<div class="form-style">
+    <h1 class="center-text">Sign Up</h1>
 
-<form action="/users" method="post">
+    <form action="/users" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
     <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="user[username]" required>
     </div>
 
     <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="user[email]" required>
     </div>
 
     <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="user[password]" required minlength="6">
     </div>
 
-    <div>
-        <button type="submit">Sign Up</button>
-    </div>
-</form>
+    <input type="submit" value="Create Account">
+    </form>
+
+    <p class="center-text">
+    Returning user? <%= link_to "Log in", login_path %>
+    </p>
+</div>
