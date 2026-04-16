@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # Static Pages
   root "static_pages#home"
-  get 'home', to: 'static_pages#home', as:'home'
-  get 'about', to: 'static_pages#about', as: 'about'
+  get "/home", to: "static_pages#home", as: "home"
+  get "/about", to: "static_pages#about", as: "about"
+  get "/edit_password", to: "users#edit_password", as: "edit_password"
+  post "/update_password", to: "users#update_password", as: "update_password"
 
   get "/login",  to: "sessions#new",  as: "login"
   get "/signup", to: "users#new",     as: "signup"

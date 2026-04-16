@@ -276,4 +276,9 @@ form.button_to {
     font-size: 13px;
     min-width: 100px;
   }
+
+  .note{
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }

@@ -11,6 +11,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit_password
+  end
+
+  def update_password
+    @user = current_user
+    if @user.authenticate(params[:user][:password])
+      @user.update(password: params[:user][:new_password])
+      redirect_to root_path, notice: "Password updated successfully"
+    else
+      render :edit_password
+    end
+  end
+
   private
 
   def user_params
