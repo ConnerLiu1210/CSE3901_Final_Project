@@ -3,6 +3,7 @@
     <ul id="menu">
       <% if logged_in? %>
         <li><span class="user-welcome"><%= current_user.username %></span></li>
+        <li><%= link_to "Home", home_path %></li>
         <li><%= link_to "My Trips", "#" %></li>
         <li><%= link_to "Edit Password", edit_password_path %></li>
         <li>
