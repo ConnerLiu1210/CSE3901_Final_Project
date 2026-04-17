@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user.present?
   end
+
   # Function to block non-logged in users from accessing a page
   def authorized
     unless logged_in?

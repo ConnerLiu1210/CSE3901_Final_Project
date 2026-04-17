@@ -3,13 +3,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to root_path, notice: "Thank you for signing up"
-    else
-      render :new
-    end
+  @user = User.new(user_params.except(:admin_code))
+
+  if params[:user][:admin_code] == "666"
+    @user.admin = true
   end
+
+  if @user.save
+    redirect_to root_path, notice: "Thank you for signing up"
+  else
+    render :new, status: :unprocessable_entity
+  end
+end
 
   def edit_password
   end
@@ -24,6 +29,7 @@ class UsersController < ApplicationController
     end
   end
 
+  
   private
 
   def user_params

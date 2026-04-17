@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about", as: "about"
   get "/edit_password", to: "users#edit_password", as: "edit_password"
   post "/update_password", to: "users#update_password", as: "update_password"
+  get "/admin", to: "admin#dashboard", as: "admin"
+
 
   get "/login",  to: "sessions#new",  as: "login"
   get "/signup", to: "users#new",     as: "signup"
