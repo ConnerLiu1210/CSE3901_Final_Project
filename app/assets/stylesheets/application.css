@@ -220,6 +220,9 @@ form:invalid input[type="submit"] {
   text-align: center;
   font-weight: 500;
   box-sizing: border-box;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .flash-notice { background: #4f772d; }
