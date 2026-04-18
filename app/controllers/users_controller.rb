@@ -14,6 +14,10 @@ class UsersController < ApplicationController
   def edit_password
   end
 
+  def show
+    @user = current_user
+  end
+
   def update_password
     @user = current_user
     if @user.authenticate(params[:user][:password])

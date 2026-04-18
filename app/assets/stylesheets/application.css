@@ -88,7 +88,7 @@ form.button_to {
   transform: translateY(-2px);
 }
 
-.user-welcome {
+#menu li .user-welcome {
   color: #ecf39e;
   font-weight: bold;
   font-style: italic;
@@ -248,6 +248,16 @@ form:invalid input[type="submit"] {
 .site-footer a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+#welcome-image {
+  max-width:60%;
+  height:auto;
+  display:block;
+  padding: 0.3em 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 @media (max-width: 768px) {

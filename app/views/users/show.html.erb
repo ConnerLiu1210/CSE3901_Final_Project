@@ -1,25 +1,72 @@
-<% provide(:title,'User Info')%>
-<table class="mytable">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Created</th>
-            <th>Updated</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><%= @user.id%></td>
-            <td><%= @user.name%></td>
-            <td><%= @user.phone%></td>
-            <td><%= @user.email%></td>
-            <td><%= @user.created_at%></td>
-            <td><%= @user.updated_at%></td>
-        </tr>
+<% provide(:title,'User Profile')%>
+
+<div class="profile-container">
     
-    </tbody>
-   
-</table>
+    <div class="profile-pic">
+        <%= image_tag("User Picture.svg") %>
+    </div>
+    <div class="profile-information">
+        <table class="mytable">
+        <thead>
+            <tr>
+            <th>Attribute</th>
+            <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Name</td>
+            <td><%= @user.username %></td>
+            </tr>
+            <tr>
+            <td>Email</td>
+            <td><%= @user.email %></td>
+            </tr>
+            <tr>
+            <td>Created At</td>
+            <td><%= @user.created_at.strftime('%B %d, %Y') %></td>
+            </tr>
+            <tr>
+            <td>Updated At</td>
+            <td><%= @user.updated_at.strftime('%B %d, %Y') %></td>
+            </tr>
+            <tr>
+                <td><%= link_to "Edit Profile", home_path %><td>
+        </tbody>
+        </table>
+    </div>
+  <div class="profile-bio">
+    <table class="mytable">
+        <thead>
+            <tr>
+                <th>Bio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><p><%= @user.bio.present? ? @user.bio : "No bio available." %></p></td>
+            </tr>
+        <tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+    .profile-picture {
+        grid-area: pic;
+    }
+    .profile-information {
+        grid-area: info;
+    }
+    .profile-bio { 
+        grid-area: bio;
+    }
+
+    .profile-container {
+        display: grid;
+        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-areas: 
+        "pic info info"
+        "bio   bio  bio ";
+    }
+</style>
