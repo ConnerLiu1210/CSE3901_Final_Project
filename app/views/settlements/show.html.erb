@@ -1,0 +1,45 @@
+<h2>Balances for "<%= @trip.name %>"</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Participant</th>
+      <th>Total Paid</th>
+      <th>Total Owed (Share)</th>
+      <th>Net Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @balances.each do |member, net| %>
+      <% paid = @trip.total_paid_by(member) %>
+      <% owed = @trip.total_owed_by(member) %>
+      <tr>
+        <td><%= member.username || member.email %></td>
+        <td>$<%= "%.2f" % paid %></td>
+        <td>$<%= "%.2f" % owed %></td>
+        <td style="color: <%= net >= 0 ? 'green' : 'red' %>">
+          <%= net >= 0 ? "+$#{"%.2f" % net}" : "-$#{"%.2f" % net.abs}" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Settlement Plan</h2>
+
+<% if @settlements.any? %>
+  <ul>
+    <% @settlements.each do |s| %>
+      <li>
+        <strong><%= s[:from].username || s[:from].email %></strong>
+        pays
+        <strong><%= s[:to].username || s[:to].email %></strong>
+        <strong>$<%= "%.2f" % s[:amount] %></strong>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>All settled up! No payments needed.</p>
+<% end %>
+
+<%= link_to "← Back to Trip", trip_path(@trip) %>

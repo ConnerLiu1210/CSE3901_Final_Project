@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   patch 'users/:id', to: 'users#update'
   #resources :users
 
-  resources :trips do
-    resources :expenses, only: [:new, :create, :edit, :update, :destroy]
-  end
+  # Settlements — hooked into teammates' trips routes
+  get '/trips/:trip_id/settlements', to: 'settlements#show', as: 'trip_settlements'
 end
