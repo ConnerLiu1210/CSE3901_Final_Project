@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_11_14_174158) do
+ActiveRecord::Schema[7.1].define(version: 2026_04_17_210004) do
+  create_table "expense_splits", force: :cascade do |t|
+    t.integer "expense_id", null: false
+    t.integer "user_id", null: false
+    t.decimal "amount", precision: 10, scale: 2, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["expense_id", "user_id"], name: "index_expense_splits_on_expense_id_and_user_id", unique: true
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "description", null: false
+    t.decimal "amount", precision: 10, scale: 2, null: false
+    t.date "date", null: false
+    t.string "category", default: "General"
+    t.integer "trip_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_expenses_on_trip_id"
+    t.index ["user_id"], name: "index_expenses_on_user_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "topic"
@@ -18,6 +40,24 @@ ActiveRecord::Schema[7.1].define(version: 2025_11_14_174158) do
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "trip_memberships", force: :cascade do |t|
+    t.integer "trip_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id", "user_id"], name: "index_trip_memberships_on_trip_id_and_user_id", unique: true
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "name", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,40 @@
+<%= form_with model: trip do |f| %>
+  <% if trip.errors.any? %>
+    <div style="color: red;">
+      <% trip.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name, "Trip Name" %>
+    <%= f.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :start_date, "Start Date" %>
+    <%= f.date_field :start_date, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :end_date, "End Date" %>
+    <%= f.date_field :end_date, required: true %>
+  </div>
+
+  <div>
+    <label>Add Participants (by User ID)</label>
+    <p><em>Other registered users to include (hold Ctrl/Cmd to select multiple):</em></p>
+    <%= select_tag "trip[participant_ids][]",
+          options_from_collection_for_select(
+            User.where.not(id: current_user.id).order(:name),
+            :id,
+            ->(u) { "#{u.name || u.email} (ID: #{u.id})" },
+            trip.members.pluck(:id)
+          ),
+          multiple: true, size: 6 %>
+  </div>
+
+  <br>
+  <%= f.submit %>
+<% end %>

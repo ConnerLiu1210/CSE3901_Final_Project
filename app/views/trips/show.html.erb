@@ -1,0 +1,97 @@
+<h1><%= @trip.name %></h1>
+<p><%= @trip.start_date.strftime("%B %d") %> – <%= @trip.end_date.strftime("%B %d, %Y") %></p>
+<p><strong>Participants:</strong> <%= @trip.members.map { |u| u.name || u.email }.join(", ") %></p>
+
+<% if @trip.creator == current_user %>
+  <%= link_to "Edit Trip", edit_trip_path(@trip) %> |
+  <%= link_to "Delete Trip", @trip, data: { turbo_method: :delete, turbo_confirm: "Delete this trip?" } %>
+<% end %>
+
+<hr>
+
+<h2>Expenses</h2>
+<%= link_to "Add Expense", new_trip_expense_path(@trip), class: "btn" %>
+
+<% if @expenses.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Paid By</th>
+        <th>Amount</th>
+        <th>Split Among</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @expenses.each do |expense| %>
+        <tr>
+          <td><%= expense.date.strftime("%b %d") %></td>
+          <td><%= expense.description %></td>
+          <td><%= expense.category %></td>
+          <td><%= expense.payer.name || expense.payer.email %></td>
+          <td>$<%= "%.2f" % expense.amount %></td>
+          <td><%= expense.participants.map { |u| u.name || u.email }.join(", ") %></td>
+          <td>
+            <%= link_to "Edit", edit_trip_expense_path(@trip, expense) %>
+            | <%= link_to "Delete", trip_expense_path(@trip, expense), data: { turbo_method: :delete, turbo_confirm: "Remove this expense?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No expenses yet.</p>
+<% end %>
+
+<hr>
+
+<h2>Balances</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Participant</th>
+      <th>Total Paid</th>
+      <th>Total Owed (Share)</th>
+      <th>Net Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trip.members.each do |member| %>
+      <% paid  = @trip.total_paid_by(member) %>
+      <% owed  = @trip.total_owed_by(member) %>
+      <% net   = @trip.net_balance(member) %>
+      <tr>
+        <td><%= member.name || member.email %></td>
+        <td>$<%= "%.2f" % paid %></td>
+        <td>$<%= "%.2f" % owed %></td>
+        <td style="color: <%= net >= 0 ? 'green' : 'red' %>">
+          <%= net >= 0 ? "+$#{"%.2f" % net}" : "-$#{"%.2f" % net.abs}" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Settlement Plan</h2>
+<% if @settlements.any? %>
+  <ul>
+    <% @settlements.each do |s| %>
+      <li>
+        <strong><%= s[:from].name || s[:from].email %></strong>
+        pays
+        <strong><%= s[:to].name || s[:to].email %></strong>
+        <strong>$<%= "%.2f" % s[:amount] %></strong>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>All settled up! No payments needed.</p>
+<% end %>
+
+<br>
+<%= link_to "← Back to My Trips", trips_path %>

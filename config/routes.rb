@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   get 'users/:id/edit', to: 'users#edit', as: 'edit_user'
   patch 'users/:id', to: 'users#update'
   #resources :users
+
+  resources :trips do
+    resources :expenses, only: [:new, :create, :edit, :update, :destroy]
+  end
 end
