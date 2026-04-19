@@ -69,6 +69,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
     t.string "title"
     t.string "password_digest"
     t.boolean "admin", default: false
+    t.string "bio"
   end
 
   add_foreign_key "posts", "users"

@@ -2,7 +2,7 @@
   <nav>
     <ul id="menu">
       <% if logged_in? && current_user.admin? %>
-        <li><span class="user-welcome"><%= current_user.name %></span></li>
+        <li><%= link_to current_user.name, show_path, class: "user-welcome" %></li>
         <li><%= link_to "Home", home_path %></li>
         <li><%= link_to "My Trips", trips_path %></li>
         <li><%= link_to "New Trip", new_trip_path %></li>
@@ -15,7 +15,7 @@
         </li>
 
       <% elsif logged_in? %>
-        <li><span class="user-welcome"><%= current_user.name %></span></li>
+        <li><%= link_to current_user.name, show_path, class: "user-welcome" %></li>
         <li><%= link_to "Home", home_path %></li>
         <li><%= link_to "My Trips", trips_path %></li>
         <li><%= link_to "New Trip", new_trip_path %></li>

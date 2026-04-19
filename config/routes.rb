@@ -7,12 +7,10 @@ Rails.application.routes.draw do
   get  "/link",  to: "static_pages#link"
 
   # Auth
-  get    "/login",          to: "sessions#new",          as: "login"
-  get    "/signup",         to: "users#new",             as: "signup"
-  delete "/logout",         to: "sessions#destroy",      as: "logout"
-  get    "/edit_password",  to: "users#edit_password",   as: "edit_password"
-  post   "/update_password",to: "users#update_password", as: "update_password"
-  post   "/sessions",       to: "sessions#create"
+  get    "/login",           to: "sessions#new",          as: "login"
+  get    "/signup",          to: "users#new",             as: "signup"
+  delete "/logout",          to: "sessions#destroy",      as: "logout"
+  post   "/sessions",        to: "sessions#create"
 
   # Admin
   get "/admin", to: "admin#dashboard", as: "admin"
@@ -25,6 +23,13 @@ Rails.application.routes.draw do
   delete "users/:id",      to: "users#destroy"
   get    "users/:id/edit", to: "users#edit",  as: "edit_user"
   patch  "users/:id",      to: "users#update"
+
+  # Profile
+  get   "/bio",             to: "users#show",           as: "show"
+  get   "/edit_profile",    to: "users#edit_profile",   as: "edit_profile"
+  patch "/update_profile",  to: "users#update_profile", as: "update_profile"
+  get   "/edit_password",   to: "users#edit_password",  as: "edit_password"
+  post  "/update_password", to: "users#update_password", as: "update_password"
 
   # Trips
   get    "/trips",          to: "trips#index",  as: "trips"

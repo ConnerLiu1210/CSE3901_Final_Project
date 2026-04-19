@@ -1,0 +1,22 @@
+<% provide(:title, 'Edit Profile') %>
+<div class="form-style">
+<h1 class="center-text">Edit Profile</h1>
+
+<%= form_with model: @user, url: update_profile_path, method: :patch, local: true do |f| %>
+      <div class="field-group">
+        <%= f.label :username, "Name" %>
+        <%= f.text_field :username, id: "username" %>
+      </div>
+      <div class="field-group">
+        <%= f.label :bio, "Bio" %>
+        <%= f.text_field :bio, id: "user_bio" %>
+      </div>
+      <div class="field-group">
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password, id: "password" %>
+    </div>
+    
+      <%= f.submit "Update Profile" %>
+      <input type="button" value="Back to Home" onclick="window.location.href='<%= root_path %>'">
+    <% end %>
+</div>

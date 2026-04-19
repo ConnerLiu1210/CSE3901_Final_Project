@@ -88,7 +88,7 @@ form.button_to {
   transform: translateY(-2px);
 }
 
-.user-welcome {
+#menu li .user-welcome {
   color: #ecf39e;
   font-weight: bold;
   font-style: italic;
@@ -250,6 +250,33 @@ form:invalid input[type="submit"] {
   text-decoration: underline;
 }
 
+#welcome-image {
+  max-width:60%;
+  height:auto;
+  display:block;
+  padding: 0.3em 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.profile-picture {
+  grid-area: pic;
+}
+.profile-information {
+  grid-area: info;
+}
+.profile-bio { 
+  grid-area: bio;
+}
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-areas: 
+  "pic info info"
+  "bio   bio  bio ";
+}
+
 @media (max-width: 768px) {
   #menu {
     gap: 0.5rem;
@@ -261,6 +288,14 @@ form:invalid input[type="submit"] {
   }
   .form-style {
     padding: 20px;
+  }
+  .profile-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "pic"
+    "info"
+    "bio" ;
   }
 }
 
