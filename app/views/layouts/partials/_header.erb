@@ -3,26 +3,26 @@
     <ul id="menu">
       <% if logged_in? && current_user.admin? %>
         <li><span class="user-welcome"><%= current_user.username %></span></li>
-        <li><%= link_to "My Trips", "#" %></li>
-        <li><%= link_to "New Trip", "#" %></li>
+        <li><%= link_to "My Trips", trips_path %></li>
+        <li><%= link_to "New Trip", new_trip_path %></li>
         <li><%= link_to "Edit Password", edit_password_path %></li>
         <li><%= link_to "Admin Panel", admin_path %></li>
 
         <li>
           <%= button_to "Log out", logout_path,
-                        method: :delete,
-                        class: "nav-link-button" %>
+              method: :delete,
+              class: "nav-link-button" %>
         </li>
 
       <% elsif  logged_in?%>
         <li><span class="user-welcome"><%= current_user.username %></span></li>
-        <li><%= link_to "My Trips", "#" %></li>
-        <li><%= link_to "New Trip", "#" %></li>
+        <li><%= link_to "My Trips", trips_path %></li>
+        <li><%= link_to "New Trip", new_trip_path %></li>
         <li><%= link_to "Edit Password", edit_password_path %></li>
         <li>
           <%= button_to "Log out", logout_path,
-                        method: :delete,
-                        class: "nav-link-button" %>
+              method: :delete,
+              class: "nav-link-button" %>
         </li>
         
       <%else%>
@@ -31,12 +31,6 @@
         <li><%= link_to "Sign up", signup_path %></li>
 
       <% end %>
-
-
-      
-
-
-
     </ul>
   </nav>
 </header>

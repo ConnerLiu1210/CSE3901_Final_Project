@@ -1,0 +1,29 @@
+<% provide(:title, "Trip") %>
+<h1>Trip</h1>
+<table class="mytable">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Trip Name</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Participants</td>
+            <td>Select</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><%= @trip.id %></td>
+            <td><%= @trip.trip_name %></td>
+            <td><%= @trip.start_date %></td>
+            <td><%= @trip.end_date %></td>
+            <td><%= @trip.participants %></td>
+            <td><%= link_to "Select", trip_path(@trip.id) %></td>
+            <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
+            <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>
+        </tr>
+    </tbody>
+</table>

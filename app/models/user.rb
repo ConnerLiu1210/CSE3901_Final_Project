@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_many :trips, dependent: :destroy
+    
     # before_save { self.email = email.downcase }
     # validates :username, presence:{message:'Name is required'}, length:{minimum: 2, maximum: 50}
     # validates :email, presence:true, length:{ minimum:10, maximum: 100},
