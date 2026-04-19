@@ -1,25 +1,26 @@
+<% provide(:title, 'Sign In') %>
 <div class="form-style">
-    <h1 class="center-text">Sign In</h1>
+  <h1 class="center-text">Sign In</h1>
 
-    <form action="/sessions" method="post">
+  <form action="/sessions" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    <div class="field-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email"
+             required placeholder="example@email.com">
     </div>
 
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+    <div class="field-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"
+             required placeholder="Enter your password">
     </div>
 
-    <div>
-        <input type="submit" value="Sign In">
-    </div>
-    </form>
+    <input type="submit" value="Sign In">
+  </form>
 
-    <p class="center-text">
+  <p class="center-text">
     New user? <%= link_to "Sign up", signup_path %>
-    </p>
+  </p>
 </div>

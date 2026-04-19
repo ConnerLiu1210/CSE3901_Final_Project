@@ -1,22 +1,28 @@
+<% provide(:title, 'Sign Up') %>
 <div class="form-style">
-    <h1 class="center-text">Sign Up</h1>
+  <h1 class="center-text">Sign Up</h1>
 
-    <form action="/users" method="post">
+  <form action="/users" method="post" id="signup-form">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-    <div>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="user[username]" required>
+    <div class="field-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="user[username]"
+             required minlength="3" maxlength="50"
+             placeholder="At least 3 characters">
     </div>
 
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="user[email]" required>
+    <div class="field-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="user[email]"
+             required placeholder="example@email.com">
     </div>
 
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="user[password]" required minlength="6">
+    <div class="field-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="user[password]"
+             required minlength="6" maxlength="20"
+             placeholder="6-20 characters">
     </div>
 
     <div>
@@ -25,9 +31,9 @@
     </div>
 
     <input type="submit" value="Create Account">
-    </form>
+  </form>
 
-    <p class="center-text">
-    Returning user? <%= link_to "Log in", login_path %>
-    </p>
+  <p class="center-text">
+    Returning user? <%= link_to "Sign in", login_path %>
+  </p>
 </div>
