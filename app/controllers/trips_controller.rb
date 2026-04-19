@@ -17,6 +17,7 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
+    @trip.user = current_user
     if @trip.save
       redirect_to trip_path(@trip.id), notice: "Trip was successfully created."
     else
@@ -32,7 +33,7 @@ class TripsController < ApplicationController
   def update
     @trip = set_trip
     if @trip.update(trip_params)
-      redirect_to trip_path(@trip.id), notice: "Trip was successfully created."
+      redirect_to trip_path(@trip.id), notice: "Trip was successfully updated."
     else
       render "edit", status: :unprocessable_entity
     end
@@ -46,7 +47,7 @@ class TripsController < ApplicationController
 
    private
     def trip_params
-      params.require(:trip).permit(:trip_name, :start_date, :end_date, participants: [])
+      params.require(:trip).permit(:name, :start_date, :end_date, member_ids: [])
     end
 
     def set_trip

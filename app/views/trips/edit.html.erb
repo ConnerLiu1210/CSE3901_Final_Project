@@ -2,8 +2,8 @@
 <%#= render "layouts/partials/trip_error_messages" %>
 <%= form_with(model: @trip, html: {class: "form-style"}) do |form| %>
     <h1>Edit Trip</h1>
-    <%= form.label :trip_name %>
-    <%= form.text_field :trip_name, required: true %>
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
     <br>
     <br>
     <%= form.label :start_date %>
@@ -14,8 +14,8 @@
     <%= form.date_field :end_date, required: true %>
     <br>
     <br>
-    <%= form.label :participants, "Who is coming on this trip?" %><br>
-    <%= form.collection_checkboxes :participants, User.all, :id, :name do |b| %>
+    <%= form.label :member_ids, "Who is coming on this trip?" %><br>
+    <%= form.collection_check_boxes :member_ids, User.all, :id, :name do |b| %>
         <div class="checkbox-item">
         <%= b.check_box %>
         <%= b.label %>

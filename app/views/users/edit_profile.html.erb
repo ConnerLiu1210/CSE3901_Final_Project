@@ -4,8 +4,8 @@
 
 <%= form_with model: @user, url: update_profile_path, method: :patch, local: true do |f| %>
       <div class="field-group">
-        <%= f.label :username, "Name" %>
-        <%= f.text_field :username, id: "username" %>
+        <%= f.label :name, "Name" %>
+        <%= f.text_field :name, id: "username" %>
       </div>
       <div class="field-group">
         <%= f.label :bio, "Bio" %>

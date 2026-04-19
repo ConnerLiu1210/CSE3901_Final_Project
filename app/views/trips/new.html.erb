@@ -2,8 +2,8 @@
 <%#= render "layouts/partials/trip_error_messages" %>
 <%= form_with(model: @trip, html: {class: "form-style"}) do |form| %>
     <h1>New Trip</h1>
-    <%= form.label :trip_name %>
-    <%= form.text_field :trip_name, required: true %>
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
     <br>
     <br>
     <%= form.label :start_date %>

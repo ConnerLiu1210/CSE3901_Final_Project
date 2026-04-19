@@ -14,7 +14,7 @@
       <% paid = @trip.total_paid_by(member) %>
       <% owed = @trip.total_owed_by(member) %>
       <tr>
-        <td><%= member.username || member.email %></td>
+        <td><%= member.name || member.email %></td>
         <td>$<%= "%.2f" % paid %></td>
         <td>$<%= "%.2f" % owed %></td>
         <td style="color: <%= net >= 0 ? 'green' : 'red' %>">
@@ -31,9 +31,9 @@
   <ul>
     <% @settlements.each do |s| %>
       <li>
-        <strong><%= s[:from].username || s[:from].email %></strong>
+        <strong><%= s[:from].name || s[:from].email %></strong>
         pays
-        <strong><%= s[:to].username || s[:to].email %></strong>
+        <strong><%= s[:to].name || s[:to].email %></strong>
         <strong>$<%= "%.2f" % s[:amount] %></strong>
       </li>
     <% end %>

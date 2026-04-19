@@ -17,10 +17,10 @@
     <tbody>
         <tr>
             <td><%= @trip.id %></td>
-            <td><%= @trip.trip_name %></td>
+            <td><%= @trip.name %></td>
             <td><%= @trip.start_date %></td>
             <td><%= @trip.end_date %></td>
-            <td><%= @trip.participants %></td>
+            <td><%= @trip.members.map(&:name).join(", ") %></td>
             <td><%= link_to "Select", trip_path(@trip.id) %></td>
             <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
             <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>

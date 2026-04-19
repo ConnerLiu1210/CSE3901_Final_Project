@@ -1075,3 +1075,1706 @@ Processing by StaticPagesController#about as HTML
 Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 3824)
 
 
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:24:18 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 774)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 8.5ms | Allocations: 8176)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 11819)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.8ms | Allocations: 12878)
+
+
+  
+ActionView::Template::Error (undefined method `username' for an instance of User):
+    15:         </li>
+    16: 
+    17:       <% elsif logged_in? %>
+    18:         <li><%= link_to current_user.username, show_path, class: "user-welcome" %></li>
+    19:         <li><%= link_to "Home", home_path %></li>
+    20:         <li><%= link_to "My Trips", trips_path %></li>
+    21:         <li><%= link_to "Edit Password", edit_password_path %></li>
+  
+app/views/layouts/partials/_header.erb:18
+app/views/layouts/application.html.erb:14
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:24:26 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 571)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 1867)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4859)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5085)
+
+
+  
+ActionView::Template::Error (undefined method `username' for an instance of User):
+    15:         </li>
+    16: 
+    17:       <% elsif logged_in? %>
+    18:         <li><%= link_to current_user.username, show_path, class: "user-welcome" %></li>
+    19:         <li><%= link_to "Home", home_path %></li>
+    20:         <li><%= link_to "My Trips", trips_path %></li>
+    21:         <li><%= link_to "Edit Password", edit_password_path %></li>
+  
+app/views/layouts/partials/_header.erb:18
+app/views/layouts/application.html.erb:14
+Started GET "/trips/new" for 127.0.0.1 at 2026-04-19 17:24:28 -0400
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.html.erb within layouts/application
+  Rendered trips/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1360)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.0ms | Allocations: 1871)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5530)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms | Allocations: 9704)
+
+
+  
+ActionView::Template::Error (undefined method `username' for an instance of User):
+    15:         </li>
+    16: 
+    17:       <% elsif logged_in? %>
+    18:         <li><%= link_to current_user.username, show_path, class: "user-welcome" %></li>
+    19:         <li><%= link_to "Home", home_path %></li>
+    20:         <li><%= link_to "My Trips", trips_path %></li>
+    21:         <li><%= link_to "Edit Password", edit_password_path %></li>
+  
+app/views/layouts/partials/_header.erb:18
+app/views/layouts/application.html.erb:14
+Started GET "/edit_password" for 127.0.0.1 at 2026-04-19 17:24:31 -0400
+Processing by UsersController#edit_password as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_password.html.erb within layouts/application
+  Rendered users/edit_password.html.erb within layouts/application (Duration: 1.0ms | Allocations: 467)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 1868)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4634)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 5067)
+
+
+  
+ActionView::Template::Error (undefined method `username' for an instance of User):
+    15:         </li>
+    16: 
+    17:       <% elsif logged_in? %>
+    18:         <li><%= link_to current_user.username, show_path, class: "user-welcome" %></li>
+    19:         <li><%= link_to "Home", home_path %></li>
+    20:         <li><%= link_to "My Trips", trips_path %></li>
+    21:         <li><%= link_to "Edit Password", edit_password_path %></li>
+  
+app/views/layouts/partials/_header.erb:18
+app/views/layouts/application.html.erb:14
+Started DELETE "/logout" for 127.0.0.1 at 2026-04-19 17:24:33 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 503)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-19 17:24:33 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 565)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.7ms | Allocations: 1057)
+  Rendered layouts/partials/_footer.erb (Duration: 0.5ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4357)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 4601)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:24:35 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 556)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.0ms | Allocations: 981)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4048)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 4283)
+
+
+Started GET "/login" for 127.0.0.1 at 2026-04-19 17:24:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 435)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 970)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3803)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4218)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2026-04-19 17:24:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 301ms (ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-19 17:24:40 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 565)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 1867)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4857)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 5083)
+
+
+  
+ActionView::Template::Error (undefined method `username' for an instance of User):
+    15:         </li>
+    16: 
+    17:       <% elsif logged_in? %>
+    18:         <li><%= link_to current_user.username, show_path, class: "user-welcome" %></li>
+    19:         <li><%= link_to "Home", home_path %></li>
+    20:         <li><%= link_to "My Trips", trips_path %></li>
+    21:         <li><%= link_to "Edit Password", edit_password_path %></li>
+  
+app/views/layouts/partials/_header.erb:18
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2026-04-19 17:25:42 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 770)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 17.7ms | Allocations: 7512)
+  Rendered layouts/partials/_footer.erb (Duration: 0.3ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 11433)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 1.8ms | Allocations: 12500)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:25:44 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 561)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.2ms | Allocations: 561)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3624)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 3860)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:25:45 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  Rendered trips/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1206)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.8ms | Allocations: 552)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4409)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 5531)
+
+
+Started GET "/bio" for 127.0.0.1 at 2026-04-19 17:25:46 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1001)
+  Rendered layouts/partials/_header.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3477)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4521)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:25:48 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 564)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.3ms | Allocations: 561)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3657)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3893)
+
+
+Started GET "/bio" for 127.0.0.1 at 2026-04-19 17:25:52 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 689)
+  Rendered layouts/partials/_header.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3149)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3987)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:25:53 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 558)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.1ms | Allocations: 561)
+  Rendered layouts/partials/_footer.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3624)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 3860)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:25:53 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  Rendered trips/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 437)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.1ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3638)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 3882)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:25:54 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 565)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.3ms | Allocations: 561)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3643)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 3880)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:25:55 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  Rendered trips/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 433)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.2ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3613)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 3857)
+
+
+Started GET "/edit_password" for 127.0.0.1 at 2026-04-19 17:25:56 -0400
+Processing by UsersController#edit_password as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_password.html.erb within layouts/application
+  Rendered users/edit_password.html.erb within layouts/application (Duration: 1.1ms | Allocations: 431)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3374)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 3673)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:25:59 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  Rendered trips/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 433)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.0ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3622)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 3866)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:25:59 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 558)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.2ms | Allocations: 561)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3621)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 3857)
+
+
+Started GET "/bio" for 127.0.0.1 at 2026-04-19 17:26:00 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 691)
+  Rendered layouts/partials/_header.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3151)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 3989)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:26:00 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 556)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 561)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3619)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 3855)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:26:01 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  Rendered trips/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 433)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3607)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 3851)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2026-04-19 17:26:02 -0400
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.html.erb within layouts/application
+  Rendered trips/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1300)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.8ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4250)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 7326)
+
+
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:26:17 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 946)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'trip_name' for Trip.):
+  
+app/controllers/trips_controller.rb:19:in `create'
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:26:54 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.6ms | Allocations: 5174)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'trip_name' for Trip.):
+  
+app/controllers/trips_controller.rb:19:in `create'
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:26:58 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 863)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'trip_name' for Trip.):
+  
+app/controllers/trips_controller.rb:19:in `create'
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:27:00 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 863)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'trip_name' for Trip.):
+  
+app/controllers/trips_controller.rb:19:in `create'
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:27:54 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+[31mUnpermitted parameter: :trip_name. Context: { controller: TripsController, action: create, request: #<ActionDispatch::Request:0x0000000126618ad8>, params: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account", "controller"=>"trips", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "start_date", "end_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", nil], ["start_date", "2026-04-19"], ["end_date", "2026-04-26"], ["user_id", 1], ["created_at", "2026-04-19 21:27:54.329188"], ["updated_at", "2026-04-19 21:27:54.329188"]]
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.6ms | Allocations: 14655)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: trips.name):
+  
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:28:00 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+[31mUnpermitted parameter: :trip_name. Context: { controller: TripsController, action: create, request: #<ActionDispatch::Request:0x0000000127b344d0>, params: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account", "controller"=>"trips", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTrip Create (1.0ms)[0m  [1m[32mINSERT INTO "trips" ("name", "start_date", "end_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", nil], ["start_date", "2026-04-19"], ["end_date", "2026-04-26"], ["user_id", 1], ["created_at", "2026-04-19 21:28:00.045623"], ["updated_at", "2026-04-19 21:28:00.045623"]]
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms | Allocations: 3397)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: trips.name):
+  
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:28:39 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+[31mUnpermitted parameter: :trip_name. Context: { controller: TripsController, action: create, request: #<ActionDispatch::Request:0x0000000127adafc0>, params: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account", "controller"=>"trips", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTrip Create (2.6ms)[0m  [1m[32mINSERT INTO "trips" ("name", "start_date", "end_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", nil], ["start_date", "2026-04-19"], ["end_date", "2026-04-26"], ["user_id", 1], ["created_at", "2026-04-19 21:28:39.885382"], ["updated_at", "2026-04-19 21:28:39.885382"]]
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.9ms | Allocations: 3397)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: trips.name):
+  
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:28:44 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account"}
+[31mUnpermitted parameter: :trip_name. Context: { controller: TripsController, action: create, request: #<ActionDispatch::Request:0x00000001265f83f0>, params: {"authenticity_token"=>"[FILTERED]", "trip"=>{"trip_name"=>"Hello", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26"}, "commit"=>"Update my account", "controller"=>"trips", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTrip Create (1.0ms)[0m  [1m[32mINSERT INTO "trips" ("name", "start_date", "end_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", nil], ["start_date", "2026-04-19"], ["end_date", "2026-04-26"], ["user_id", 1], ["created_at", "2026-04-19 21:28:44.429627"], ["updated_at", "2026-04-19 21:28:44.429627"]]
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms | Allocations: 3397)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: trips.name):
+  
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:28:47 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 768)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 3.5ms | Allocations: 997)
+  Rendered layouts/partials/_footer.erb (Duration: 0.6ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4884)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 5902)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:28:48 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  Rendered trips/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 873)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.8ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4056)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 4517)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2026-04-19 17:28:49 -0400
+Processing by TripsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/new.html.erb within layouts/application
+  Rendered trips/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1254)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.1ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4196)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4512)
+
+
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:28:57 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"name"=>"Miami", "start_date"=>"2026-04-19", "end_date"=>"2026-04-19"}, "commit"=>"Update my account"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTrip Create (0.8ms)[0m  [1m[32mINSERT INTO "trips" ("name", "start_date", "end_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Miami"], ["start_date", "2026-04-19"], ["end_date", "2026-04-19"], ["user_id", 1], ["created_at", "2026-04-19 21:28:57.358399"], ["updated_at", "2026-04-19 21:28:57.358399"]]
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:3000/trips/1
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms | Allocations: 2381)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:28:57 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  Rendered trips/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1584)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1671)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 3051)
+
+
+  
+ActionView::Template::Error (undefined method `participants' for an instance of Trip):
+    20:             <td><%= @trip.name %></td>
+    21:             <td><%= @trip.start_date %></td>
+    22:             <td><%= @trip.end_date %></td>
+    23:             <td><%= @trip.participants %></td>
+    24:             <td><%= link_to "Select", trip_path(@trip.id) %></td>
+    25:             <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
+    26:             <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>
+  
+app/views/trips/show.html.erb:23
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:29:35 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:60:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  Rendered trips/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3404)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3492)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.7ms | Allocations: 10798)
+
+
+  
+ActionView::Template::Error (Missing model class TripMembership for the Trip#trip_memberships association. You can specify a different model class with the :class_name option.):
+    20:             <td><%= @trip.name %></td>
+    21:             <td><%= @trip.start_date %></td>
+    22:             <td><%= @trip.end_date %></td>
+    23:             <td><%= @trip.members.map(&:name).join(", ") %></td>
+    24:             <td><%= link_to "Select", trip_path(@trip.id) %></td>
+    25:             <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
+    26:             <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>
+  
+app/views/trips/show.html.erb:23
+Started POST "/trips" for 127.0.0.1 at 2026-04-19 17:29:39 -0400
+Processing by TripsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"name"=>"Miami", "start_date"=>"2026-04-19", "end_date"=>"2026-04-19"}, "commit"=>"Update my account"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTrip Create (1.0ms)[0m  [1m[32mINSERT INTO "trips" ("name", "start_date", "end_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Miami"], ["start_date", "2026-04-19"], ["end_date", "2026-04-19"], ["user_id", 1], ["created_at", "2026-04-19 21:29:39.156776"], ["updated_at", "2026-04-19 21:29:39.156776"]]
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:21:in `create'
+Redirected to http://127.0.0.1:3000/trips/2
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms | Allocations: 8858)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2026-04-19 17:29:39 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:60:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  Rendered trips/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 2320)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 2407)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 3140)
+
+
+  
+ActionView::Template::Error (Missing model class TripMembership for the Trip#trip_memberships association. You can specify a different model class with the :class_name option.):
+    20:             <td><%= @trip.name %></td>
+    21:             <td><%= @trip.start_date %></td>
+    22:             <td><%= @trip.end_date %></td>
+    23:             <td><%= @trip.members.map(&:name).join(", ") %></td>
+    24:             <td><%= link_to "Select", trip_path(@trip.id) %></td>
+    25:             <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
+    26:             <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>
+  
+app/views/trips/show.html.erb:23
+Started GET "/trips/2" for 127.0.0.1 at 2026-04-19 17:30:07 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:60:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 8696)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 3.4ms | Allocations: 5028)
+  Rendered layouts/partials/_footer.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 16754)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 2.3ms | Allocations: 23872)
+
+
+Started GET "/trips/2/edit" for 127.0.0.1 at 2026-04-19 17:30:27 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:60:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  Rendered trips/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2032)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2119)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 2790)
+
+
+  
+ActionView::Template::Error (undefined method `collection_checkboxes' for an instance of ActionView::Helpers::FormBuilder):
+    15:     <br>
+    16:     <br>
+    17:     <%= form.label :participants, "Who is coming on this trip?" %><br>
+    18:     <%= form.collection_checkboxes :participants, User.all, :id, :name do |b| %>
+    19:         <div class="checkbox-item">
+    20:         <%= b.check_box %>
+    21:         <%= b.label %>
+  
+app/views/trips/edit.html.erb:18
+app/views/trips/edit.html.erb:3
+Started GET "/trips/2/edit" for 127.0.0.1 at 2026-04-19 17:30:49 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:60:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  Rendered trips/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 9196)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 9284)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.0ms | Allocations: 16391)
+
+
+  
+ActionView::Template::Error (undefined method `participants' for an instance of Trip):
+    17:     <%= form.label :participants, "Who is coming on this trip?" %><br>
+    18:     <%= form.collection_check_boxes :participants, User.all, :id, :name do |b| %>
+    19:         <div class="checkbox-item">
+    20:         <%= b.check_box %>
+    21:         <%= b.label %>
+    22:         </div>
+    23:     <% end %>
+  
+app/views/trips/edit.html.erb:20
+app/views/trips/edit.html.erb:18
+app/views/trips/edit.html.erb:3
+Started GET "/trips/2/edit" for 127.0.0.1 at 2026-04-19 17:31:27 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/edit.html.erb:20
+  Rendered trips/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 10993)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.4ms | Allocations: 1682)
+  Rendered layouts/partials/_footer.erb (Duration: 0.3ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 15701)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 2.9ms | Allocations: 22820)
+
+
+Started PATCH "/trips/2" for 127.0.0.1 at 2026-04-19 17:31:45 -0400
+Processing by TripsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"name"=>"Miami", "start_date"=>"2026-04-19", "end_date"=>"2026-04-26", "member_ids"=>[""]}, "commit"=>"Update my account", "id"=>"2"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mTrip Update (0.1ms)[0m  [1m[33mUPDATE "trips" SET "end_date" = ?, "updated_at" = ? WHERE "trips"."id" = ?[0m  [["end_date", "2026-04-26"], ["updated_at", "2026-04-19 21:31:45.393081"], ["id", 2]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+Redirected to http://127.0.0.1:3000/trips/2
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms | Allocations: 4679)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2026-04-19 17:31:45 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1408)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.6ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4356)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 5028)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:31:48 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3260)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.7ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.9ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6201)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 6510)
+
+
+Started GET "/trips/1/edit" for 127.0.0.1 at 2026-04-19 17:31:52 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/edit.html.erb:20
+  Rendered trips/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2267)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5204)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 5811)
+
+
+Started PATCH "/trips/1" for 127.0.0.1 at 2026-04-19 17:31:56 -0400
+Processing by TripsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"name"=>"Miami", "start_date"=>"2026-04-19", "end_date"=>"2026-04-28", "member_ids"=>[""]}, "commit"=>"Update my account", "id"=>"1"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mTrip Update (0.1ms)[0m  [1m[33mUPDATE "trips" SET "end_date" = ?, "updated_at" = ? WHERE "trips"."id" = ?[0m  [["end_date", "2026-04-28"], ["updated_at", "2026-04-19 21:31:56.944444"], ["id", 1]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+Redirected to http://127.0.0.1:3000/trips/1
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 3320)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:31:56 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1162)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.7ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4101)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 4708)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:32:01 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2846)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.7ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5787)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6031)
+
+
+Started GET "/trips/1/edit" for 127.0.0.1 at 2026-04-19 17:32:05 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/edit.html.erb:20
+  Rendered trips/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2281)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.1ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5218)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 5825)
+
+
+Started PATCH "/trips/1" for 127.0.0.1 at 2026-04-19 17:32:09 -0400
+Processing by TripsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trip"=>{"name"=>"Miami", "start_date"=>"2026-04-19", "end_date"=>"2026-04-28", "member_ids"=>["", "1"]}, "commit"=>"Update my account", "id"=>"1"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mTripMembership Create (0.3ms)[0m  [1m[32mINSERT INTO "trip_memberships" ("trip_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["trip_id", 1], ["user_id", 1], ["created_at", "2026-04-19 21:32:09.604914"], ["updated_at", "2026-04-19 21:32:09.604914"]]
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:35:in `update'
+Redirected to http://127.0.0.1:3000/trips/1
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms | Allocations: 8755)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:32:09 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1170)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.6ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4118)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 4725)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:32:11 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2860)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5801)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 6045)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:32:13 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1151)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.3ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4088)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 4695)
+
+
+Started GET "/trips/1/edit" for 127.0.0.1 at 2026-04-19 17:32:19 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/edit.html.erb:20
+  Rendered trips/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2273)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.2ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5210)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 5817)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:32:31 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2848)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5789)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 6033)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:34:04 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 15662)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 1692)
+  Rendered layouts/partials/_footer.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 20385)
+Completed 200 OK in 26ms (Views: 18.0ms | ActiveRecord: 1.9ms | Allocations: 23873)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:34:11 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2864)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.2ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5805)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 6050)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:34:13 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2845)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.5ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5786)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.8ms | Allocations: 6030)
+
+
+Started GET "/trips/1/edit" for 127.0.0.1 at 2026-04-19 17:34:16 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/edit.html.erb:20
+  Rendered trips/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2770)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5716)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 7074)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:34:19 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 730)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.8ms | Allocations: 570)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3816)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 4261)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:34:20 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2848)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.7ms | Allocations: 547)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5789)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 6033)
+
+
+Started GET "/edit_password" for 127.0.0.1 at 2026-04-19 17:34:21 -0400
+Processing by UsersController#edit_password as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_password.html.erb within layouts/application
+  Rendered users/edit_password.html.erb within layouts/application (Duration: 1.0ms | Allocations: 467)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.0ms | Allocations: 551)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3417)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3862)
+
+
+Started GET "/bio" for 127.0.0.1 at 2026-04-19 17:34:24 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 995)
+  Rendered layouts/partials/_header.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3455)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 4365)
+
+
+Started GET "/edit_profile" for 127.0.0.1 at 2026-04-19 17:34:30 -0400
+Processing by UsersController#edit_profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_profile.html.erb within layouts/application
+  Rendered users/edit_profile.html.erb within layouts/application (Duration: 5.5ms | Allocations: 891)
+  Rendered layouts/partials/_header.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3473)
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 4372)
+
+
+Started PATCH "/update_profile" for 127.0.0.1 at 2026-04-19 17:34:38 -0400
+Processing by UsersController#update_profile as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"", "bio"=>"Linlin LI", "password"=>"[FILTERED]"}, "commit"=>"Update Profile"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_profile.html.erb within layouts/application
+  Rendered users/edit_profile.html.erb within layouts/application (Duration: 0.6ms | Allocations: 374)
+  Rendered layouts/partials/_header.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2952)
+Completed 200 OK in 302ms (Views: 3.5ms | ActiveRecord: 2.4ms | Allocations: 3881)
+
+
+Started PATCH "/update_profile" for 127.0.0.1 at 2026-04-19 17:34:56 -0400
+Processing by UsersController#update_profile as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Linlin Li", "bio"=>"Hello :)", "password"=>"[FILTERED]"}, "commit"=>"Update Profile"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.3ms | Allocations: 1386)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'username' for User.):
+  
+app/controllers/users_controller.rb:43:in `update_profile'
+Started PATCH "/update_profile" for 127.0.0.1 at 2026-04-19 17:35:25 -0400
+Processing by UsersController#update_profile as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Linlin Li", "bio"=>"Hello :)", "password"=>"[FILTERED]"}, "commit"=>"Update Profile"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 1.7ms | Allocations: 7643)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'username' for User.):
+  
+app/controllers/users_controller.rb:43:in `update_profile'
+Started PATCH "/update_profile" for 127.0.0.1 at 2026-04-19 17:36:01 -0400
+Processing by UsersController#update_profile as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Linlin Li", "bio"=>"Hello :)", "password"=>"[FILTERED]"}, "commit"=>"Update Profile"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[31mUnpermitted parameter: :username. Context: { controller: UsersController, action: update_profile, request: #<ActionDispatch::Request:0x00000001307d7130>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Linlin Li", "bio"=>"Hello :)", "password"=>"[FILTERED]"}, "commit"=>"Update Profile", "controller"=>"users", "action"=>"update_profile"} }[0m
+Completed 500 Internal Server Error in 612ms (ActiveRecord: 1.6ms | Allocations: 8513)
+
+
+  
+NoMethodError (undefined method `username' for an instance of User):
+  
+app/controllers/users_controller.rb:43:in `update_profile'
+Started PATCH "/update_profile" for 127.0.0.1 at 2026-04-19 17:37:24 -0400
+Processing by UsersController#update_profile as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Linlin Li", "bio"=>"Hello :)", "password"=>"[FILTERED]"}, "commit"=>"Update Profile"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[31mUnpermitted parameter: :username. Context: { controller: UsersController, action: update_profile, request: #<ActionDispatch::Request:0x000000013127ce50>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Linlin Li", "bio"=>"Hello :)", "password"=>"[FILTERED]"}, "commit"=>"Update Profile", "controller"=>"users", "action"=>"update_profile"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:43:in `update_profile'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `update_profile'
+  [1m[36mUser Update (0.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "password_digest" = ?, "bio" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2026-04-19 21:37:24.951367"], ["password_digest", "[FILTERED]"], ["bio", "Hello :)"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `update_profile'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:43:in `update_profile'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 609ms (ActiveRecord: 3.4ms | Allocations: 10330)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-19 17:37:24 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 772)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 994)
+  Rendered layouts/partials/_footer.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4914)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.1ms | Allocations: 5976)
+
+
+Started GET "/bio" for 127.0.0.1 at 2026-04-19 17:37:28 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 998)
+  Rendered layouts/partials/_header.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3467)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 4478)
+
+
+Started GET "/edit_profile" for 127.0.0.1 at 2026-04-19 17:37:33 -0400
+Processing by UsersController#edit_profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_profile.html.erb within layouts/application
+  Rendered users/edit_profile.html.erb within layouts/application (Duration: 1.8ms | Allocations: 705)
+  Rendered layouts/partials/_header.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3286)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 4179)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-19 17:37:35 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 558)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.8ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3631)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 3867)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:37:38 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 562)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.9ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3638)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 3874)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:37:38 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 562)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 2.4ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 3638)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.2ms | Allocations: 3874)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:37:39 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 562)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.8ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3633)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 3870)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:37:40 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 558)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 3.0ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3622)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 3858)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:37:40 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 556)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.0ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3647)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 3883)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:37:41 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 556)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.0ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3632)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 3868)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:37:42 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 10232)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 13180)
+Completed 200 OK in 24ms (Views: 15.9ms | ActiveRecord: 1.0ms | Allocations: 15584)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:37:45 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1370)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.8ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4308)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 5667)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2026-04-19 17:37:47 -0400
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/show.html.erb:23:in `map'
+  Rendered trips/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1155)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.0ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4093)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 4701)
+
+
+Started GET "/trips/1/edit" for 127.0.0.1 at 2026-04-19 17:37:48 -0400
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:54:in `set_trip'
+  Rendering layout layouts/application.html.erb
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/edit.html.erb:18
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/edit.html.erb:20
+  Rendered trips/edit.html.erb within layouts/application (Duration: 14.8ms | Allocations: 2727)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.0ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5674)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 1.0ms | Allocations: 6345)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:40:49 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2846)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.2ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5788)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.5ms | Allocations: 6032)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:51 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 562)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.5ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3635)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 3871)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:40:52 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2843)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.1ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5785)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.8ms | Allocations: 6029)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:53 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 558)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.3ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3631)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 3867)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:54 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 564)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.6ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3640)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 3876)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:54 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 556)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.1ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3641)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3877)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:55 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 556)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3629)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3865)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:55 -0400
+Processing by StaticPagesController#home as HTML
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:55 -0400
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 598)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.4ms | Allocations: 570)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3776)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4340)
+
+
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 558)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3625)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 3861)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:40:55 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 564)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3628)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 3864)
+
+
+Started GET "/edit_password" for 127.0.0.1 at 2026-04-19 17:40:57 -0400
+Processing by UsersController#edit_password as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_password.html.erb within layouts/application
+  Rendered users/edit_password.html.erb within layouts/application (Duration: 1.3ms | Allocations: 432)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.8ms | Allocations: 549)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3376)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 3675)
+
+
+Started POST "/update_password" for 127.0.0.1 at 2026-04-19 17:41:04 -0400
+Processing by UsersController#update_password as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]", "new_password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `update_password'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `update_password'
+  [1m[36mUser Update (0.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2026-04-19 21:41:05.338646"], ["password_digest", "[FILTERED]"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `update_password'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `update_password'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 596ms (ActiveRecord: 1.5ms | Allocations: 3263)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-19 17:41:05 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 562)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3671)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3907)
+
+
+Started GET "/bio" for 127.0.0.1 at 2026-04-19 17:41:08 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 691)
+  Rendered layouts/partials/_header.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3151)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4005)
+
+
+Started GET "/about" for 127.0.0.1 at 2026-04-19 17:41:12 -0400
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.9ms | Allocations: 143)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 1.9ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3330)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 3630)
+
+
+Started GET "/home" for 127.0.0.1 at 2026-04-19 17:41:14 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 562)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 5.2ms | Allocations: 562)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3623)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 3860)
+
+
+Started GET "/trips" for 127.0.0.1 at 2026-04-19 17:41:16 -0400
+Processing by TripsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trips" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/trips/index.html.erb:3
+  [1m[36mTrip Load (0.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/trips/index.html.erb:19
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 1]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "trip_memberships" ON "users"."id" = "trip_memberships"."user_id" WHERE "trip_memberships"."trip_id" = ?[0m  [["trip_id", 2]]
+  ↳ app/views/trips/index.html.erb:25:in `map'
+  Rendered trips/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2864)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered layouts/partials/_header.erb (Duration: 0.9ms | Allocations: 548)
+  Rendered layouts/partials/_footer.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5815)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 6059)
+
+

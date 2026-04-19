@@ -1,24 +1,20 @@
 module TripCalculations
   extend ActiveSupport::Concern
 
-  # Total amount paid by a participant (expenses they covered)
   def total_paid_by(user)
     expenses.where(user_id: user.id).sum(:amount)
   end
 
-  # Total share owed by a participant across all expenses
   def total_owed_by(user)
     ExpenseSplit.joins(:expense)
                 .where(expenses: { trip_id: id }, user_id: user.id)
                 .sum(:amount)
   end
 
-  # Positive = is owed money; negative = owes money
   def net_balance(user)
     total_paid_by(user) - total_owed_by(user)
   end
 
-  # Greedy debt-minimization: returns array of { from:, to:, amount: }
   def settlements
     balances = members.map { |u| [u, net_balance(u).to_f] }.to_h
 
