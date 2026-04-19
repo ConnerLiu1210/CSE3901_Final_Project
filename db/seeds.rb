@@ -1,29 +1,9 @@
-require 'faker'
-
-80.times do
-  first_name = Faker::Name.first_name.downcase
-  last_name = Faker::Name.last_name.downcase
-  random_number = rand(1..200)
-  email = "#{last_name}.#{random_number}@osu.edu"
-  password = Faker::Internet.password(min_length: 8, max_length: 20)
-  phone = Faker::PhoneNumber.phone_number
-
-  # Create the user
-  user = User.create!(
-    name: "#{first_name} #{last_name}",
-    email: email,
-    phone: phone,
-    password: password
-  )
-  puts "Created user: #{first_name} #{last_name} (#{email})"
-
-  # Create posts for each user
-  5.times do
-    Post.create!(
-      title: Faker::Lorem.sentence,
-      topic: Faker::Lorem.paragraph,
-      user: user # Assign the post to the created user
-    )
-    puts "Created post for user: #{user.name}"
-  end
-end
+# This file should ensure the existence of records required to run the application in every environment (production,
+# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Example:
+#
+#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
+#     MovieGenre.find_or_create_by!(name: genre_name)
+#   end

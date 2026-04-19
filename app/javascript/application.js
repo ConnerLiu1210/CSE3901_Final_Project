@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Page loaded!')
-  console.log('Hello, World!')
-  const btn = document.getElementById('hello-btn')
-  if (btn) {
-    btn.addEventListener('click', () => {
-      alert('Hello World!')
-    })
-  }
-})
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+import "@hotwired/turbo-rails"
+import "controllers"
