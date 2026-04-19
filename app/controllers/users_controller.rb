@@ -14,6 +14,10 @@ class UsersController < ApplicationController
   def edit_password
   end
 
+  def edit_profile
+    @user = current_user
+  end
+
   def show
     @user = current_user
   end
@@ -28,9 +32,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_profile
+    @user = current_user
+    # use permitted params so updates actually apply
+    if @user.authenticate(params[:user][:password])
+      @user.update(user_params)
+      redirect_to root_path, notice: "Profile updated successfully"
+    else
+      flash.now[:alert] = "Invalid password"
+      render :edit_profile
+    end
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :bio)
   end
 end

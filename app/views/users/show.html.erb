@@ -1,5 +1,6 @@
 <% provide(:title,'User Profile')%>
 
+<% if logged_in? %>
 <div class="profile-container">
     
     <div class="profile-pic">
@@ -31,7 +32,7 @@
             <td><%= @user.updated_at.strftime('%B %d, %Y') %></td>
             </tr>
             <tr>
-                <td><%= link_to "Edit Profile", home_path %><td>
+                <td><%= link_to "Edit Profile", edit_profile_path %><td>
         </tbody>
         </table>
     </div>
@@ -50,23 +51,6 @@
     </table>
   </div>
 </div>
-
-<style>
-    .profile-picture {
-        grid-area: pic;
-    }
-    .profile-information {
-        grid-area: info;
-    }
-    .profile-bio { 
-        grid-area: bio;
-    }
-
-    .profile-container {
-        display: grid;
-        grid-template-columns: 1fr, 1fr, 1fr;
-        grid-template-areas: 
-        "pic info info"
-        "bio   bio  bio ";
-    }
-</style>
+<% else %>
+    <p>You aren't signed in. <%= link_to " Login", login_path %></li> to view your profile.</p>
+<% end %>

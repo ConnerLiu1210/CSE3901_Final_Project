@@ -260,6 +260,23 @@ form:invalid input[type="submit"] {
   width: 50%;
 }
 
+.profile-picture {
+  grid-area: pic;
+}
+.profile-information {
+  grid-area: info;
+}
+.profile-bio { 
+  grid-area: bio;
+}
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-areas: 
+  "pic info info"
+  "bio   bio  bio ";
+}
+
 @media (max-width: 768px) {
   #menu {
     gap: 0.5rem;
@@ -271,6 +288,14 @@ form:invalid input[type="submit"] {
   }
   .form-style {
     padding: 20px;
+  }
+  .profile-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "pic"
+    "info"
+    "bio" ;
   }
 }
 
