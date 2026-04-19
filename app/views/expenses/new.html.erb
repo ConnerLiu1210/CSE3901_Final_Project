@@ -1,7 +1,12 @@
 <% provide(:title, "Add Expense") %>
-<%= form_with(url: trip_expenses_path(@trip), html: { class: "form-style" }) do |form| %>
+<%= form_with(url: trip_expenses_path(@trip), scope: :expense, html: { class: "form-style" }) do |form| %>
   <h1 class="center-text">Add Expense</h1>
   <p class="center-text">Trip: <strong><%= @trip.trip_name %></strong></p>
+  <% if @expense&.errors&.any? %>
+    <div style="color: red; margin-bottom: 1rem;">
+      <ul><% @expense.errors.full_messages.each do |msg| %><li><%= msg %></li><% end %></ul>
+    </div>
+  <% end %>
 
   <%= form.label :description %>
   <%= form.text_field :description, required: true %>

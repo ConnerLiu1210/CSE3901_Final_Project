@@ -8,9 +8,9 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = @trip.expenses.build(expense_params)
     split_ids = Array(params.dig(:expense, :split_user_ids)).map(&:to_i).reject(&:zero?)
     split_ids = @trip.users.pluck(:id) if split_ids.empty?
+    @expense = @trip.expenses.build(expense_params)
 
     if @expense.save
       @expense.split_evenly_among(split_ids)
