@@ -15,10 +15,9 @@
         </li>
 
       <% elsif logged_in? %>
-        <li><%= link_to current_user.name, show_path, class: "user-welcome" %></li>
+        <li><%= link_to current_user.username, show_path, class: "user-welcome" %></li>
         <li><%= link_to "Home", home_path %></li>
         <li><%= link_to "My Trips", trips_path %></li>
-        <li><%= link_to "New Trip", new_trip_path %></li>
         <li><%= link_to "Edit Password", edit_password_path %></li>
         <li>
           <%= button_to "Log out", logout_path,
