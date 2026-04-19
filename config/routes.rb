@@ -40,6 +40,11 @@ Rails.application.routes.draw do
   patch  "/trips/:id",      to: "trips#update"
   delete "/trips/:id",      to: "trips#destroy"
 
+  # Expenses (nested under trips)
+  get    "/trips/:trip_id/expenses/new", to: "expenses#new",     as: "new_trip_expense"
+  post   "/trips/:trip_id/expenses",     to: "expenses#create",  as: "trip_expenses"
+  delete "/trips/:trip_id/expenses/:id", to: "expenses#destroy", as: "trip_expense"
+
   # Settlements
   get "/trips/:trip_id/settlements", to: "settlements#show", as: "trip_settlements"
 end

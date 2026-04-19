@@ -1,10 +1,12 @@
 class TripsController < ApplicationController
+  before_action :authorized
+  before_action :set_trip, only: [:show, :edit, :update, :destroy]
+
   def index
-    @trips = Trip.all
+    @trips = current_user.trips
   end
 
   def show
-    @trip = set_trip
     if @trip.nil?
       flash[:alert] = "Trip not found!"
       redirect_to trips_path
@@ -16,41 +18,43 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(trip_params)
-    @trip.user = current_user
+    @trip = Trip.new(trip_params.except(:user_ids))
+    selected_ids = Array(params.dig(:trip, :user_ids)).map(&:to_i).reject(&:zero?)
+    selected_ids |= [current_user.id]
     if @trip.save
+      @trip.user_ids = selected_ids
       redirect_to trip_path(@trip.id), notice: "Trip was successfully created."
     else
-      # Returning the appropriate HTTP status code (422) when validation fails
       render "new", status: :unprocessable_entity
     end
   end
 
   def edit
-    @trip = set_trip
   end
 
   def update
-    @trip = set_trip
-    if @trip.update(trip_params)
+    selected_ids = Array(params.dig(:trip, :user_ids)).map(&:to_i).reject(&:zero?)
+    selected_ids |= [current_user.id]
+    if @trip.update(trip_params.except(:user_ids))
+      @trip.user_ids = selected_ids
       redirect_to trip_path(@trip.id), notice: "Trip was successfully updated."
     else
       render "edit", status: :unprocessable_entity
     end
   end
 
-  def delete
-    @trip = set_trip
-    @trip.delete
+  def destroy
+    @trip.destroy
     redirect_to trips_path, alert: "Trip was successfully deleted."
   end
 
-   private
-    def trip_params
-      params.require(:trip).permit(:name, :start_date, :end_date, member_ids: [])
-    end
+  private
 
-    def set_trip
-      @trip = Trip.find_by_id(params[:id])
-    end
+  def trip_params
+    params.require(:trip).permit(:trip_name, :start_date, :end_date, user_ids: [])
+  end
+
+  def set_trip
+    @trip = current_user.trips.find_by_id(params[:id])
+  end
 end

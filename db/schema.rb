@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
+ActiveRecord::Schema[7.1].define(version: 2026_04_19_210001) do
   create_table "expense_splits", force: :cascade do |t|
     t.integer "expense_id", null: false
     t.integer "user_id", null: false
@@ -18,6 +18,8 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["expense_id", "user_id"], name: "index_expense_splits_on_expense_id_and_user_id", unique: true
+    t.index ["expense_id"], name: "index_expense_splits_on_expense_id"
+    t.index ["user_id"], name: "index_expense_splits_on_user_id"
   end
 
   create_table "expenses", force: :cascade do |t|
@@ -33,6 +35,15 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
     t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
+  create_table "participants", force: :cascade do |t|
+    t.integer "trip_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_participants_on_trip_id"
+    t.index ["user_id"], name: "index_participants_on_user_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "topic"
@@ -42,22 +53,12 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "trip_memberships", force: :cascade do |t|
-    t.integer "trip_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["trip_id", "user_id"], name: "index_trip_memberships_on_trip_id_and_user_id", unique: true
-  end
-
   create_table "trips", force: :cascade do |t|
-    t.string "name", null: false
-    t.date "start_date", null: false
-    t.date "end_date", null: false
-    t.integer "user_id", null: false
+    t.string "trip_name"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,6 +73,11 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
     t.string "bio"
   end
 
+  add_foreign_key "expense_splits", "expenses"
+  add_foreign_key "expense_splits", "users"
+  add_foreign_key "expenses", "trips"
+  add_foreign_key "expenses", "users"
+  add_foreign_key "participants", "trips"
+  add_foreign_key "participants", "users"
   add_foreign_key "posts", "users"
-  add_foreign_key "trips", "users"
 end

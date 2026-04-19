@@ -16,7 +16,7 @@ module TripCalculations
   end
 
   def settlements
-    balances = members.map { |u| [u, net_balance(u).to_f] }.to_h
+    balances = users.map { |u| [u, net_balance(u).to_f] }.to_h
 
     debtors   = balances.select { |_, b| b < -0.001 }.map { |u, b| [u, b.abs] }.sort_by { |_, b| -b }
     creditors = balances.select { |_, b| b >  0.001 }.map { |u, b| [u, b]     }.sort_by { |_, b| -b }

@@ -1,29 +1,62 @@
 <% provide(:title, "Trip") %>
-<h1>Trip</h1>
+<h1><%= @trip.trip_name %></h1>
 <table class="mytable">
-    <thead>
-        <tr>
-            <td>#</td>
-            <td>Trip Name</td>
-            <td>Start Date</td>
-            <td>End Date</td>
-            <td>Participants</td>
-            <td>Select</td>
-            <td>Update</td>
-            <td>Delete</td>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
-            <td><%= @trip.id %></td>
-            <td><%= @trip.name %></td>
-            <td><%= @trip.start_date %></td>
-            <td><%= @trip.end_date %></td>
-            <td><%= @trip.members.map(&:name).join(", ") %></td>
-            <td><%= link_to "Select", trip_path(@trip.id) %></td>
-            <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
-            <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>
-        </tr>
-    </tbody>
+  <thead class="trip-header">
+    <tr>
+      <td>Trip Name</td>
+      <td>Start Date</td>
+      <td>End Date</td>
+      <td>Participants</td>
+      <td>Update</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @trip.trip_name %></td>
+      <td><%= @trip.start_date %></td>
+      <td><%= @trip.end_date %></td>
+      <td><%= @trip.users.map(&:name).join(", ") %></td>
+      <td><%= link_to "Edit", edit_trip_path(@trip.id) %></td>
+      <td><%= button_to "Delete", trip_path(@trip.id), method: :delete %></td>
+    </tr>
+  </tbody>
 </table>
+
+<h2>Expenses</h2>
+<% if @trip.expenses.any? %>
+  <table class="mytable">
+    <thead class="trip-header">
+      <tr>
+        <td>Description</td>
+        <td>Category</td>
+        <td>Date</td>
+        <td>Amount</td>
+        <td>Paid By</td>
+        <td>Split Among</td>
+        <td>Remove</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @trip.expenses.order(date: :desc).each do |expense| %>
+        <tr>
+          <td><%= expense.description %></td>
+          <td><%= expense.category %></td>
+          <td><%= expense.date %></td>
+          <td>$<%= "%.2f" % expense.amount %></td>
+          <td><%= expense.payer.name %></td>
+          <td><%= expense.split_users.map(&:name).join(", ") %></td>
+          <td><%= button_to "Remove", trip_expense_path(@trip, expense), method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No expenses yet.</p>
+<% end %>
+
+<div style="margin: 1rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+  <%= button_to "Add Expense", new_trip_expense_path(@trip), method: :get, class: "trip-button" %>
+  <%= button_to "View Settlements", trip_settlements_path(@trip), method: :get, class: "trip-button" %>
+  <%= button_to "Back to My Trips", trips_path, method: :get, class: "trip-button" %>
+</div>

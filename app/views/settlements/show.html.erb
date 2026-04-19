@@ -1,7 +1,8 @@
-<h2>Balances for "<%= @trip.name %>"</h2>
+<% provide(:title, "Settlements") %>
+<h2>Balances for "<%= @trip.trip_name %>"</h2>
 
-<table>
-  <thead>
+<table class="mytable">
+  <thead class="trip-header">
     <tr>
       <th>Participant</th>
       <th>Total Paid</th>
@@ -14,7 +15,7 @@
       <% paid = @trip.total_paid_by(member) %>
       <% owed = @trip.total_owed_by(member) %>
       <tr>
-        <td><%= member.name || member.email %></td>
+        <td><%= member.name %></td>
         <td>$<%= "%.2f" % paid %></td>
         <td>$<%= "%.2f" % owed %></td>
         <td style="color: <%= net >= 0 ? 'green' : 'red' %>">
@@ -31,9 +32,9 @@
   <ul>
     <% @settlements.each do |s| %>
       <li>
-        <strong><%= s[:from].name || s[:from].email %></strong>
+        <strong><%= s[:from].name %></strong>
         pays
-        <strong><%= s[:to].name || s[:to].email %></strong>
+        <strong><%= s[:to].name %></strong>
         <strong>$<%= "%.2f" % s[:amount] %></strong>
       </li>
     <% end %>
@@ -42,4 +43,5 @@
   <p>All settled up! No payments needed.</p>
 <% end %>
 
-<%= link_to "← Back to Trip", trip_path(@trip) %>
+<br>
+<%= button_to "← Back to Trip", trip_path(@trip), method: :get, class: "trip-button" %>

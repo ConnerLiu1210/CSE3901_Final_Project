@@ -210,6 +210,40 @@ form:invalid input[type="submit"] {
   cursor: not-allowed;
 }
 
+.trip-header {
+  color: white;
+  background-color: #4f772d;
+  font-weight: bold;
+}
+
+.trip-users-list .trip-user {
+  border: 2px solid #4f772d;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.trip-users-list .trip-user label {
+  color: white;
+  background-color: #4f772d;
+  padding: 5px 10px;
+}
+
+form.button_to .trip-button {
+  padding: 15px;
+  background-color: #4f772d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+form.button_to .trip-button:hover {
+  background-color: #31572c;
+}
+
 .flash {
   width: 100%;
   padding: 15px;

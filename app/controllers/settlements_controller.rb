@@ -1,9 +1,13 @@
 class SettlementsController < ApplicationController
-  before_action :require_login
+  before_action :authorized
 
   def show
-    @trip = Trip.find(params[:trip_id])
-    @balances    = @trip.members.map { |u| [u, @trip.net_balance(u)] }
+    @trip = current_user.trips.find_by_id(params[:trip_id])
+    unless @trip
+      flash[:alert] = "Trip not found."
+      redirect_to trips_path and return
+    end
+    @balances    = @trip.users.map { |u| [u, @trip.net_balance(u)] }
     @settlements = @trip.settlements
   end
 end

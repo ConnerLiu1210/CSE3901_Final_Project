@@ -1,0 +1,43 @@
+<% provide(:title, "Add Expense") %>
+<%= form_with(url: trip_expenses_path(@trip), html: { class: "form-style" }) do |form| %>
+  <h1 class="center-text">Add Expense</h1>
+  <p class="center-text">Trip: <strong><%= @trip.trip_name %></strong></p>
+
+  <%= form.label :description %>
+  <%= form.text_field :description, required: true %>
+  <br><br>
+
+  <%= form.label :amount %>
+  <%= form.number_field :amount, step: 0.01, min: 0.01, required: true %>
+  <br><br>
+
+  <%= form.label :date %>
+  <%= form.date_field :date, required: true %>
+  <br><br>
+
+  <%= form.label :category %>
+  <%= form.select :category, Trip::CATEGORIES, {}, class: "form-select" %>
+  <br><br>
+
+  <%= form.label :user_id, "Paid by" %>
+  <%= form.select :user_id, @trip.users.map { |u| [u.name, u.id] }, {}, required: true %>
+  <br><br>
+
+  <label>Split among</label>
+  <div class="trip-users-list">
+    <% @trip.users.each do |user| %>
+      <div class="trip-user">
+        <label>
+          <%= check_box_tag "expense[split_user_ids][]", user.id, true, id: "split_#{user.id}" %>
+          <%= user.name %>
+        </label>
+      </div>
+    <% end %>
+  </div>
+  <br><br>
+
+  <%= form.submit "Add Expense" %>
+<% end %>
+
+<br>
+<%= button_to "Cancel", trip_path(@trip), method: :get, class: "trip-button" %>

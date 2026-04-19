@@ -2,7 +2,7 @@ class Expense < ApplicationRecord
   belongs_to :trip
   belongs_to :payer, class_name: "User", foreign_key: :user_id
   has_many :expense_splits, dependent: :destroy
-  has_many :participants, through: :expense_splits, source: :user
+  has_many :split_users, through: :expense_splits, source: :user
 
   validates :description, presence: true
   validates :amount, presence: true, numericality: { greater_than: 0 }
