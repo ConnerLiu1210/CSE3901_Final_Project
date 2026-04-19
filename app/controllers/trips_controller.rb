@@ -1,10 +1,12 @@
 class TripsController < ApplicationController
+  before_action :authorized
+  before_action :set_trip, only: [:show, :edit, :update, :destroy]
+
   def index
-    @trips = Trip.all
+    @trips = current_user.trips
   end
 
   def show
-    @trip = set_trip
     if @trip.nil?
       flash[:alert] = "Trip not found!"
       redirect_to trips_path
@@ -26,11 +28,9 @@ class TripsController < ApplicationController
   end
 
   def edit
-    @trip = set_trip
   end
 
   def update
-    @trip = set_trip
     if @trip.update(trip_params)
       redirect_to trip_path(@trip.id), notice: "Trip was successfully created."
     else
@@ -38,18 +38,17 @@ class TripsController < ApplicationController
     end
   end
 
-  def delete
-    @trip = set_trip
-    @trip.delete
+  def destroy
+    @trip.destroy
     redirect_to trips_path, alert: "Trip was successfully deleted."
   end
 
    private
     def trip_params
-      params.require(:trip).permit(:trip_name, :start_date, :end_date, participants: [])
+      params.require(:trip).permit(:trip_name, :start_date, :end_date, user_ids: [])
     end
 
     def set_trip
-      @trip = Trip.find_by_id(params[:id])
+      @trip = current_user.trips.find_by_id(params[:id])
     end
 end

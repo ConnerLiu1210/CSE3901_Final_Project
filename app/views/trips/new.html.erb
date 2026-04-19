@@ -1,7 +1,7 @@
 <% provide(:title, "New Trip") %>
 <%#= render "layouts/partials/trip_error_messages" %>
 <%= form_with(model: @trip, html: {class: "form-style"}) do |form| %>
-    <h1>New Trip</h1>
+    <h1 class="center-text">New Trip</h1>
     <%= form.label :trip_name %>
     <%= form.text_field :trip_name, required: true %>
     <br>
@@ -14,8 +14,16 @@
     <%= form.date_field :end_date, required: true %>
     <br>
     <br>
-    
+    <%= form.label :user_ids, "Who is coming on this trip?" %>
+    <div class="trip-users-list">
+        <%= form.collection_check_boxes :user_ids, User.all, :id, :username do |user_box| %>
+            <div class="trip-user">
+                <%= user_box.label %>
+                <%= user_box.check_box %>
+            </div>
+        <% end %>
+    </div>
     <br>
     <br>
-    <%= form.submit "Update my account" %>
+    <%= form.submit "Create New Trip" %>
 <% end %>

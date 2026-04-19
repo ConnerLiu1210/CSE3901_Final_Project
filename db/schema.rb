@@ -10,15 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
+ActiveRecord::Schema[7.1].define(version: 2026_04_19_195923) do
+  create_table "participants", force: :cascade do |t|
+    t.integer "trip_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_participants_on_trip_id"
+    t.index ["user_id"], name: "index_participants_on_user_id"
+  end
+
   create_table "trips", force: :cascade do |t|
     t.string "trip_name"
     t.date "start_date"
     t.date "end_date"
-    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,5 +37,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_18_203850) do
     t.boolean "admin", default: false
   end
 
-  add_foreign_key "trips", "users"
+  add_foreign_key "participants", "trips"
+  add_foreign_key "participants", "users"
 end
