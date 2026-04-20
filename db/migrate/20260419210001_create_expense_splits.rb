@@ -8,6 +8,6 @@ class CreateExpenseSplits < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    add_index :expense_splits, [:expense_id, :user_id], unique: true, name: "index_expense_splits_on_expense_id_and_user_id"
+    add_index :expense_splits, [ :expense_id, :user_id ], unique: true, name: "index_expense_splits_on_expense_id_and_user_id"
   end
 end

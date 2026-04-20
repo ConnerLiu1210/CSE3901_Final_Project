@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
 ruby "3.3.0"
-
+group :development, :test do
+  gem "rubocop-rails-omakase", require: false
+end
 gem "rails", "~> 7.1.6"
 gem "sprockets-rails"
 gem "sqlite3", ">= 1.4"

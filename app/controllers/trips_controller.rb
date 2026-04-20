@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   before_action :authorized
-  before_action :set_trip, only: [:show, :edit, :update, :destroy]
+  before_action :set_trip, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @trips = current_user.trips
@@ -20,7 +20,7 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(trip_params.except(:user_ids))
     selected_ids = Array(params.dig(:trip, :user_ids)).map(&:to_i).reject(&:zero?)
-    selected_ids |= [current_user.id]
+    selected_ids |= [ current_user.id ]
     if @trip.save
       @trip.user_ids = selected_ids
       redirect_to trip_path(@trip.id), notice: "Trip was successfully created."
@@ -34,7 +34,7 @@ class TripsController < ApplicationController
 
   def update
     selected_ids = Array(params.dig(:trip, :user_ids)).map(&:to_i).reject(&:zero?)
-    selected_ids |= [current_user.id]
+    selected_ids |= [ current_user.id ]
     if @trip.update(trip_params.except(:user_ids))
       @trip.user_ids = selected_ids
       redirect_to trip_path(@trip.id), notice: "Trip was successfully updated."

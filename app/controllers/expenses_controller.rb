@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
   before_action :authorized
   before_action :set_trip
-  before_action :set_expense, only: [:destroy]
+  before_action :set_expense, only: [ :destroy ]
 
   def new
     @expense = Expense.new

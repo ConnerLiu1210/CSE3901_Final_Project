@@ -5,7 +5,7 @@ class Trip < ApplicationRecord
   has_many :users, through: :participants
   has_many :expenses, dependent: :destroy
 
-  CATEGORIES = ["General", "Gas", "Lodging", "Food", "Entertainment", "Other"].freeze
+  CATEGORIES = [ "General", "Gas", "Lodging", "Food", "Entertainment", "Other" ].freeze
 
   validates :trip_name, presence: true
   validates :start_date, presence: true

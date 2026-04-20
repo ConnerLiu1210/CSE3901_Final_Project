@@ -7,7 +7,7 @@ class SettlementsController < ApplicationController
       flash[:alert] = "Trip not found."
       redirect_to trips_path and return
     end
-    @balances    = @trip.users.map { |u| [u, @trip.net_balance(u)] }
+    @balances    = @trip.users.map { |u| [ u, @trip.net_balance(u) ] }
     @settlements = @trip.settlements
   end
 end
