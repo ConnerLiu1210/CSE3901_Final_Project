@@ -2,6 +2,7 @@ html, body {
   height: 100%;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -311,6 +312,41 @@ form.button_to .trip-button:hover {
   "bio   bio  bio ";
 }
 
+.admin-trips-table-wrap {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.admin-trips-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.admin-trips-table th,
+.admin-trips-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-trips-table th {
+  background-color: #2f6b2f;
+  color: white;
+  font-weight: 700;
+}
+
+.admin-trips-table tbody tr:nth-child(even) {
+  background-color: #f8faf8;
+}
+
+.admin-trips-table tbody tr:hover {
+  background-color: #eef2e9;
+}
+
 @media (max-width: 768px) {
   #menu {
     gap: 0.5rem;
@@ -367,4 +403,6 @@ form.button_to .trip-button:hover {
     font-size: 0.9rem;
     padding: 10px;
   }
+
+  
 }

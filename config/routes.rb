@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # Admin
   get "/admin", to: "admin#dashboard", as: "admin"
 
+
   # Users
   get    "users",          to: "users#index"
   get    "users/new",      to: "users#new",  as: "new_user"

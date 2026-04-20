@@ -1,38 +1,32 @@
-<% provide(:title,'Home')%>
-<h2>We Might Not Keep This Page</h2>
-<h2>Project Guidelines</h2>
-<ol>
-  <li>
-    Please make sure that your project designs are responsive, meaning they should look and work well on all screen sizes, including desktops, tablets, and mobile devices.
-  </li>
-  <li>
-    Use flexible layouts, media queries, and scalable images to ensure a good user experience across devices.
-  </li>
-  <li>
-    Validate on the front-end for users, and on the back-end for security.
-  </li>
-  <li>
-    Maintain a consistent design with colors, fonts, and spacing across all pages.
-  </li>
-  <li>
-    Ensure accessibility by using proper headings, alt text for images, and readable contrast.
-  </li>
-  <li>
-    Make navigation intuitive with clear menus and links.
-  </li>
-  <li>
-    Optimize performance by compressing images and minimizing load times.
-  </li>
-  <li>
-    Test your project on multiple devices or browser emulators to ensure responsiveness.
-  </li>
-  <li>
-    Provide clear error handling messages for invalid inputs or system errors.
-  </li>
-  <li>
-    Follow basic security practices by using strong parameters in Rails to permit only allowed attributes, sanitize inputs, and avoid exposing sensitive data.
-  </li>
-  <li>
-    Do not use scaffolds in Rails; build your controllers, views, and models manually to better understand the framework.
-  </li>
-</ol>
+<h1>Admin Panel</h1>
+
+<h2>All Trips</h2>
+
+<% if @trips.any? %>
+  <div class="admin-trips-table-wrap">
+    <table class="admin-trips-table">
+      <thead>
+        <tr>
+          <th>Trip Name</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Participants</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @trips.each do |trip| %>
+          <tr>
+            <td><%= trip.trip_name %></td>
+            <td><%= trip.start_date %></td>
+            <td><%= trip.end_date %></td>
+            <td><%= trip.users.map { |u| u.name || u.username }.join(", ") %></td>
+            <td><%= link_to "View", trip_path(trip), class: "admin-view-link" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <p>No trips found.</p>
+<% end %>
